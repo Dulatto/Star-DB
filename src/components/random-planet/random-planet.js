@@ -22,21 +22,22 @@ export default class RandomPlanet extends Component {
   };
 
   updatePlanet() {
-    const id = 12;
+    const id = 3;
     this.swapiService
       .getPlanet(id)
       .then(this.onPlanetLoaded);
+      console.log("planet", id); 
   }
 
   render() {
-
+    
     const { planet: { id, name, population,
       rotationPeriod, diameter } } = this.state;
-
+     
     return (
       <div className="random-planet jumbotron rounded">
         <img className="planet-image"
-             src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} />
+             src={`https://starwars-visualguide.com/assets/img/planets/3.jpg`} />
         <div>
           <h4>{name}</h4>
           <ul className="list-group list-group-flush">
