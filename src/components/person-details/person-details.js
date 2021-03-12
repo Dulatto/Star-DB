@@ -1,8 +1,32 @@
 import React, { Component } from 'react';
+import SwapiService from '../../services/swapi-service';
 
 import './person-details.css';
 
 export default class PersonDetails extends Component {
+
+  swapiService = new SwapiService
+
+  state={
+    person: null
+  };
+  componentDidMount(){
+    this.updatePerson();
+  }
+
+
+  updatePerson() {
+    const { personId} = this.props;
+    if (personId){
+      return;
+    }
+    this.swapiService
+    .getPerson(personId)
+    .then((person) => {
+      this.setState({person});
+    })
+  }
+
 
   render() {
     return (
