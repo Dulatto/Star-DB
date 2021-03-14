@@ -38,9 +38,7 @@ componentDidUpdate(prevProps){
     if(!this.state.person){
       return <span>Select a person from a list</span>
     }
-    if (!this.state.person){
-      return <Spinner/>;
-    }
+    
 
     const  {id, name, gender, birthYear, eyeColor} = this.state.person;
 
