@@ -3,7 +3,7 @@ import './header.css'
 
 const Header = () => {
     return (
-        <div className="header d-flex">
+      <div className="header d-flex m-auto">
         <h3>
           <a href="#">
             StarDB
