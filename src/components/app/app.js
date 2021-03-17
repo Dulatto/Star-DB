@@ -47,9 +47,9 @@ export default class App extends Component {
       <div className="stardb-app">
         <Header />
         { planet}
-        <div className="row m-auto button-row">
+        <div className="row ml-2 button-row">
           <button
-            className="toggle-planet btn btn-warning btn-lg"
+            className="toggle-planet btn btn-warning btn-lg mr-2"
             onClick={this.toggleRandomPlanet}>
             Toggle Random Planet
         </button>
@@ -57,7 +57,7 @@ export default class App extends Component {
         </div>
         <PeoplePage />
 
-        <div className="row mb-2">
+        {/* <div className="row mb-2">
           <div className="col-md-6">
             <ItemList onItemSelected={this.onPersonSelected}
               getData={this.swapiService.getAllPlanets}
@@ -66,9 +66,9 @@ export default class App extends Component {
           <div className="col-md-6">
             <PersonDetails personId={this.state.selectedPerson} />
           </div>
-        </div>
+        </div> */}
 
-        <div className="row mb-2">
+        {/* <div className="row mb-2">
           <div className="col-md-6">
             <ItemList onItemSelected={this.onPersonSelected}
               getData={this.swapiService.getAllStarships}
@@ -77,7 +77,7 @@ export default class App extends Component {
           <div className="col-md-6">
             <PersonDetails personId={this.state.selectedPerson} />
           </div>
-        </div>
+        </div> */}
 
       </div>
     );
