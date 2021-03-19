@@ -12,6 +12,7 @@ import ItemDetails from '../item-details/item-details';
 import SwapiService from '../../services/swapi-service';
 import ErrorBoundry from '../error-boundry/error-boundry';
 import Row from '../row/row';
+import Record from '../item-details/item-details';
 
 export default class App extends Component {
 
@@ -56,7 +57,12 @@ export default class App extends Component {
         <ItemDetails 
            itemId={5}
            getData={getStarship}
-           getImageUrl={getStarshipImage}/>
+           getImageUrl={getStarshipImage}>
+
+             <Record field="gender" label="Gender" />
+             <Record field="eyeColor" label="Eye Color" />
+
+             </ItemDetails>
       );
 
 
