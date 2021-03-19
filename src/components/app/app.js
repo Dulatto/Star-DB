@@ -44,7 +44,7 @@ export default class App extends Component {
       <RandomPlanet/> :
       null;
 
-      const {getPerson, getStarship, getPersonImage, getStarshipImage} = this.swapiService
+      const {getPerson, getStarship, getPersonImage, getStarshipImage} = this.swapiService;
       const personDetails = (
         <ItemDetails 
            itemId={11}
@@ -60,11 +60,14 @@ export default class App extends Component {
         <ItemDetails 
            itemId={5}
            getData={getStarship}
-           getImageUrl={getStarshipImage}>
+           getImageUrl={getStarshipImage} >
+             
+             <Record field="model" label="Model" />
+             <Record field="length" label="Length" />
+             <Record field="costInCredits" label="Cost" />
 
-       
+        </ItemDetails>
 
-             </ItemDetails>
       );
 
 
