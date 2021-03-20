@@ -80,6 +80,7 @@ export default class App extends Component {
        left={personDetails}
        right={starshipDetails} />
       </div>
+      
       </ErrorBoundry>
     );
   }
