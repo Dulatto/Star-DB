@@ -39,7 +39,7 @@ export default class PeoplePage extends Component {
     )
     const personDetails =(
       <ErrorBoundry>
-      <ItemDetails personId={this.state.selectedPerson} />
+      <ItemDetails personId={this.state.selectedPerson } />
       </ErrorBoundry>
     )
 
