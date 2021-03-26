@@ -14,7 +14,7 @@ import Row from '../row/row';
 
 export default class App extends Component {
 
-  swapiService = new SwapiService;
+  swapiService = new SwapiService();
 
   state = {
     showRandomPlanet: true,    
@@ -41,7 +41,7 @@ export default class App extends Component {
       }
 
     const planet = this.state.showRandomPlanet ?
-      <RandomPlanet/> :
+      <RandomPlanet /> :
       null;
 
       const {getPerson, getStarship, getPersonImage, getStarshipImage} = this.swapiService;
