@@ -9,15 +9,16 @@ export default class SwapiService {
         if (!res.ok){
            throw new Error(`Could not fetch ${url}` + 
            `,received ${res.status}`)
-        }
-    
+        }    
       return await res.json();
         };
 
 
 getAllPeople = async() => {
     const res = await this.getResource(`/people/`);
-    return res.results.map(this._transformPerson);
+    return res.results
+    .map(this._transformPerson)
+    .slice(0, 5);
   };
 
 getPerson= async(id) =>  {
@@ -26,7 +27,9 @@ getPerson= async(id) =>  {
   };
 getAllPlanets= async() => {
     const res = await this.getResource(`/planets/`);
-    return res.results.map(this._transformPlanet);
+    return res.results
+      .map(this._transformPlanet)
+      .slice(0, 5);
 };
 getPlanet= async(id) =>  {
     const planet = await this.getResource(`/planets/${id}`);
@@ -34,7 +37,9 @@ getPlanet= async(id) =>  {
 };
 getAllStarships= async() =>  {
     const res = await this.getResource(`/starships/`);
-    return res.results.map(this._transformStarship);
+    return res.results
+    .map(this._transformStarship)
+    .slice(0, 5);
   };
 
  getStarship= async(id) =>  {
