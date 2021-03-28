@@ -4,7 +4,7 @@ import Spinner from '../spinner/spinner';
 
 import './item-list.css';
 
-export default class ItemList extends Component {
+ class ItemList extends Component {
 
 
   state = {
@@ -54,3 +54,13 @@ export default class ItemList extends Component {
     );
   }
 }
+
+const f = () =>{
+  return class extends Component{
+     render(){
+       return <p>Hi</p>
+     }
+  };
+};
+
+export default f()

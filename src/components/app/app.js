@@ -17,8 +17,7 @@ export default class App extends Component {
   swapiService = new SwapiService();
 
   state = {
-    showRandomPlanet: true,    
-    hasError: false
+    showRandomPlanet: true    
   };
 
   toggleRandomPlanet = () => {
@@ -29,22 +28,15 @@ export default class App extends Component {
     });
   };
 
-
-  componentDidCatch() {
-    this.setState({ hasError: true });
-  }
-
     render() {
-
-      if(this.state.hasError){
-        return <ErrorIndicator />
-      }
 
     const planet = this.state.showRandomPlanet ?
       <RandomPlanet /> :
       null;
 
-      const {getPerson, getStarship, getPersonImage, getStarshipImage} = this.swapiService;
+      const {getPerson, getStarship, getPersonImage, getStarshipImage, getAllPeople,
+        getAllPlanets} = this.swapiService;
+
       const personDetails = (
         <ItemDetails 
            itemId={11}
@@ -56,6 +48,7 @@ export default class App extends Component {
 
              </ItemDetails>
       );
+
       const starshipDetails = (
         <ItemDetails 
            itemId={5}
@@ -65,9 +58,7 @@ export default class App extends Component {
              <Record field="model" label="Model" />
              <Record field="length" label="Length" />
              <Record field="costInCredits" label="Cost" />
-
         </ItemDetails>
-
       );
 
 
