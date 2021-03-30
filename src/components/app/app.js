@@ -7,7 +7,7 @@ import ErrorBoundry from '../error-boundry';
 import ItemDetails, { Record } from "../item-details/item-details";
 import SwapiService from "../../services/swapi-service";
 import DummySwapiService from '../../services/dummy-swapi-service';
-import { SwapiServiceProvider} from '../swapi-service-context';
+import { SwapiServiceProvider } from '../swapi-service-context';
 
 import {
   PersonDetails,
@@ -39,17 +39,17 @@ export default class App extends Component {
   render() {
 
     const planet = this.state.showRandomPlanet ?
-      <RandomPlanet/> :
+      <RandomPlanet /> :
       null;
 
     const { getPerson,
-            getStarship,
-            getPersonImage,
-            getStarshipImage,
-            getAllPeople,
-            getAllPlanets } = this.swapiService;
+      getStarship,
+      getPersonImage,
+      getStarshipImage,
+      getAllPeople,
+      getAllPlanets } = this.swapiService;
 
- 
+
 
     return (
       <ErrorBoundry>
