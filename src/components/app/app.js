@@ -56,15 +56,11 @@ export default class App extends Component {
             <Header />
 
             <PersonDetails itemId={11} />
-
             <PlanetDetails itemId={5} />
-
             <StarshipDetails itemId={9} />
 
             <PersonList />
-
             <StarshipList />
-
             <PlanetList />
 
           </div>
