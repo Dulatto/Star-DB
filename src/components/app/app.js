@@ -49,8 +49,6 @@ export default class App extends Component {
       getAllPeople,
       getAllPlanets } = this.swapiService;
 
-
-
     return (
       <ErrorBoundry>
         <SwapiServiceProvider value={this.swapiService}>
