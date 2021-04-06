@@ -9,9 +9,7 @@ const Header = () => {
         <a href="#/"> StarDB </a>
       </h3>
       <ul className="d-flex">
-        <li>
-          <a href="#/people">People</a>
-        </li>
+        <li> <a href="#/people">People</a></li>
         <li>
           <a href="#/planets">Planets</a>
         </li>
