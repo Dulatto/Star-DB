@@ -3,7 +3,9 @@ import React from 'react';
 import './row.css';
 
 const Row = ({ left, right }) => {
+
   return (
+
     <div className="row mb2">
       <div className="col-md-6">
         {left}
@@ -12,7 +14,9 @@ const Row = ({ left, right }) => {
         {right}
       </div>
     </div>
+
   );
+
 };
 
 export default Row;
