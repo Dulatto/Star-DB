@@ -28,7 +28,6 @@ const withData = (View) => {
         });
     }
 
-
     render() {
       const { data } = this.state;
 
