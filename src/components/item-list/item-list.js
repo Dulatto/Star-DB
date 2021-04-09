@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
 import { withData } from '../hoc-helpers';
@@ -15,8 +15,8 @@ const ItemList = (props) => {
 
     return (
       <li className="list-group-item"
-          key={id}
-          onClick={() => onItemSelected(id)}>
+        key={id}
+        onClick={() => onItemSelected(id)}>
         {label}
       </li>
     );
