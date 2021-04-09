@@ -32,7 +32,7 @@ export default class App extends Component {
     this.setState(({ swapiService }) => {
 
       const Service = swapiService instanceof SwapiService ?
-                        DummySwapiService : SwapiService;
+        DummySwapiService : SwapiService;
 
       return {
         swapiService: new Service()
@@ -51,37 +51,9 @@ export default class App extends Component {
   render() {
 
     const planet = this.state.showRandomPlanet ?
-      <RandomPlanet/> :
+      <RandomPlanet /> :
       null;
 
-    const { getPerson,
-            getStarship,
-            getPersonImage,
-            getStarshipImage } = this.state.swapiService;
-
-    const personDetails = (
-      <ItemDetails
-        itemId={11}
-        getData={getPerson}
-        getImageUrl={getPersonImage} >
-
-        <Record field="gender" label="Gender" />
-        <Record field="eyeColor" label="Eye Color" />
-
-      </ItemDetails>
-    );
-
-    const starshipDetails = (
-      <ItemDetails
-        itemId={5}
-        getData={getStarship}
-        getImageUrl={getStarshipImage}>
-
-        <Record field="model" label="Model" />
-        <Record field="length" label="Length" />
-        <Record field="costInCredits" label="Cost" />
-      </ItemDetails>
-    );
 
     return (
       <ErrorBoundry>
