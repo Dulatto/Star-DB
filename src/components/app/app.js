@@ -56,9 +56,9 @@ export default class App extends Component {
 
             <PeoplePage />
 
-            <Row left={<PlanetList />} right={<PlanetDetails itemId={5} />} />
+            <PlanetsPage />
 
-            <Row left={<StarshipList />} right={<StarshipDetails itemId={9} />} />
+            <StarshipsPage />
 
           </div>
         </SwapiServiceProvider>
