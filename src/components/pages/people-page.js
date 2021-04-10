@@ -14,7 +14,6 @@ export default class PeoplePage extends Component {
 
     render() {
         const { selectedItem } = this.state;
-
         return (
             <Row
                 left={<PersonList onItemSelected={this.onItemSelected} />}
