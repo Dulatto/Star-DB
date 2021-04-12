@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './header.css';
 
 const Header = ({ onServiceChange }) => {
@@ -23,8 +22,8 @@ const Header = ({ onServiceChange }) => {
       </ul>
 
       <button
-          onClick={onServiceChange}
-          className="btn btn-primary btn-sm">
+        onClick={onServiceChange}
+        className="btn btn-primary btn-sm">
         Change Service
       </button>
     </div>
