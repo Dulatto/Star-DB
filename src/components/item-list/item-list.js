@@ -29,6 +29,10 @@ const ItemList = (props) => {
   );
 };
 
+ItemList.defaultProps = {
+  onItemSelected: () => { }
+}
+
 const { getAllPeople } = new SwapiService();
 
 export default withData(ItemList, getAllPeople);
