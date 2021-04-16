@@ -7,6 +7,7 @@ import DummySwapiService from '../../services/dummy-swapi-service';
 import { SwapiServiceProvider } from '../swapi-service-context';
 import { PeoplePage, PlanetsPage, StarshipsPage } from '../pages';
 import './app.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default class App extends Component {
 
