@@ -46,7 +46,10 @@ export default class App extends Component {
               <Route path='/planets' component={PlanetsPage} />
               <Route path='/starships' exact component={StarshipsPage} />
               <Route path='/starships/:id'
-                render={() => <StarshipDetails />} />
+                render={({ match }) => {
+                  const { id } = match.params;
+                  return <StarshipDetails itemId={id} />
+                }} />
 
             </div>
           </Router>
