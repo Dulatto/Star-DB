@@ -5,7 +5,7 @@ import ErrorBoundry from '../error-boundry';
 import SwapiService from '../../services/swapi-service';
 import DummySwapiService from '../../services/dummy-swapi-service';
 import { SwapiServiceProvider } from '../swapi-service-context';
-import { PeoplePage, PlanetsPage, StarshipsPage } from '../pages';
+import { PeoplePage, PlanetsPage, StarshipsPage, LoginPage, SecretPage } from '../pages';
 import './app.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { StarshipDetails } from '../sw-components';
@@ -50,6 +50,13 @@ export default class App extends Component {
                   const { id } = match.params;
                   return <StarshipDetails itemId={id} />
                 }} />
+              <Route path='/login'
+                render={() => (
+                  <LoginPage
+                    isLoggedIn={false}
+                    onLogin={() => { }} />)} />
+              <Route path='/secret'
+                render={() => (<SecretPage isLoggedIn={false} />)} />
 
             </div>
           </Router>
