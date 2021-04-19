@@ -55,4 +55,6 @@ const withData = (View) => {
   };
 };
 
+
+
 export default withData;
