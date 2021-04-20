@@ -46,27 +46,27 @@ export default class App extends Component {
             <div className="stardb-app">
               <Header onServiceChange={this.onServiceChange} />
               <RandomPlanet />
-
-              <Route path='/'
-                render={() => <h2>Welcome to StarDB</h2>}
-                exact />
-              <Route path='/people/:id?' component={PeoplePage} />
-              <Route path='/planets' component={PlanetsPage} />
-              <Route path='/starships' exact component={StarshipsPage} />
-              <Route path='/starships/:id'
-                render={({ match }) => {
-                  const { id } = match.params;
-                  return <StarshipDetails itemId={id} />
-                }} />
-              <Route path='/login'
-                render={() => (
-                  <LoginPage
-                    isLoggedIn={isLoggedIn}
-                    onLogin={this.onLogin} />
-                )} />
-              <Route path='/secret'
-                render={() => (<SecretPage isLoggedIn={isLoggedIn} />)} />
-
+              <Switch>
+                <Route path='/'
+                  render={() => <h2>Welcome to StarDB</h2>}
+                  exact />
+                <Route path='/people/:id?' component={PeoplePage} />
+                <Route path='/planets' component={PlanetsPage} />
+                <Route path='/starships' exact component={StarshipsPage} />
+                <Route path='/starships/:id'
+                  render={({ match }) => {
+                    const { id } = match.params;
+                    return <StarshipDetails itemId={id} />
+                  }} />
+                <Route path='/login'
+                  render={() => (
+                    <LoginPage
+                      isLoggedIn={isLoggedIn}
+                      onLogin={this.onLogin} />
+                  )} />
+                <Route path='/secret'
+                  render={() => (<SecretPage isLoggedIn={isLoggedIn} />)} />
+              </Switch>
             </div>
           </Router>
         </SwapiServiceProvider>
