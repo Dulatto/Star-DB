@@ -19,4 +19,6 @@ const withSwapiService = (mapMethodsToProps) => (Wrapped) => {
   }
 };
 
+
+
 export default withSwapiService;
